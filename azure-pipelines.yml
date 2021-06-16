@@ -8,7 +8,10 @@
 
 name: $(date:yyyyMMdd)$(rev:.r)
 
-pool: Azure Pipelines
+pool:
+  vmImage: 'ubuntu-latest'
+  steps:
+  - script: echo hello from Linux
 
 pr:
   branches:
